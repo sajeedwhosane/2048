@@ -1,9 +1,17 @@
 body{
-    margin: 10%;
+    margin-left:10%;
 }
+/*
+Heading
+*/
+#title{
+    font-size: 100px;
+}
+
 #grid{
    width:100%;
    display:flex;
+   border:solid 5px gray;
 }
 .r1{
     display:flex;
