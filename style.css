@@ -1,0 +1,18 @@
+body{
+    margin: 10%;
+}
+#grid{
+   width:100%;
+   display:flex;
+}
+.r1{
+    display:flex;
+    flex-wrap: no-wrap;
+}
+.cell{
+    min-width: 200px;
+    width:15%;
+    height:100px;
+    padding:10px;
+    border: solid 1px orange;
+}
