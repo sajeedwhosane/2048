@@ -7,12 +7,6 @@ function logKey(e) {
 let a = checkEmptyCells();
 if(a=='board_full'){
     console.log("Game Over");
-}else{
-    // merge the cells.
-    // then check the empty cells.
-    // randomly add a value to the empty cell. 
-    // randomly add a value 2 to the cell.
-    console.log("empty");
 }
 // check if there are empty cells.b
 //if no empty cells then game over.
@@ -27,6 +21,7 @@ switch(key){
   break;
 
   case 'ArrowDown': case 'KeyS':
+    addRandomValues(a);
   //console.log("Down");
   break;
   
@@ -44,7 +39,11 @@ console.log("hey");
 
 
 let newGameBtn=document.getElementById("new_game_btn");
-newGameBtn.addEventListener('click',emptyAllCells);
+newGameBtn.addEventListener('click',function(){
+    emptyAllCells();
+    let emptyCells=getEmptyCells();
+    addRandomValues(emptyCells,2);
+});
 /*
 function to check for empty values in the grid.
 */
@@ -73,7 +72,7 @@ function checkEmptyCells(){
         return a;
     }
 }
-
+/*
 function addRandomValues(x){
     switch(x){
         case 1:
@@ -93,10 +92,22 @@ function addRandomValues(x){
 
     }
 }
+*/
 
 function emptyAllCells(){
     let x=document.querySelectorAll(".cell");
     for(let i=0;i<x.length;i++){
         x[i].innerText="";
     }
+}
+
+function addRandomValues(arr,n){
+   let max=arr.length-1;
+   let min=0;
+   for(let i=0;i<n;i++){
+    let rV=  Math.floor(Math.random() * (max));
+    console.log(arr[rV]);
+    document.getElementById(arr[rV]).innerText=2;
+   }
+     
 }
