@@ -50,6 +50,9 @@ Heading
 }
 .cell{
     background-color: red;
+    text-align: center;
+    padding:25px;
+    font-size:25px;
    }
 /* styling created according to flexbox
 .r1{    
