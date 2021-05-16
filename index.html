@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="#" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="main">
+            <h1>Image Puzzle</h1>
+            <div id="puzzleImageBox">
+                <img id="puzzleImage" width="400px" height="400px" />
+                <div id="actualImageBox">
+                    <img id="actualImage" width="280px" height="300px" />
+                    <p id="levelPanel">
+                        <input
+                            type="radio"
+                            name="level"
+                            id="easy"
+                            checked="checked"
+                            value="3"
+                        />
+                        <label for="easy">Easy</label>
+                        <input
+                            type="radio"
+                            name="level"
+                            id="medium"
+                            value="4"
+                        />
+                        <label for="medium">Medium</label>
+                        <input type="radio" name="level" id="hard" value="5" />
+                        <label for="hard">Hard</label>
+                    </p>
+                    <p>
+                        <input
+                            type="file"
+                            accept="image/*"
+                            name="image"
+                            id="file"
+                            onchange="loadFile(event)"
+                        />
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+    <style type="text/css">
+        h1 {
+            text-align: center;
+        }
+        #puzzleImageBox {
+            margin: 0px auto;
+        }
+        #main #actualImageBox {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #main #puzzleImageBox {
+            display: inline-block;
+            vertical-align: top;
+        }
+        body {
+            text-align: center;
+        }
+        img {
+            background-color: bisque;
+        }
+        input {
+            margin-left: 20px;
+        }
+    </style>
+</html>
