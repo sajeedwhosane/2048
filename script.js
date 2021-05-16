@@ -44,3 +44,4 @@ newGameBtn.addEventListener('click',function(){
     let emptyCells=getEmptyCells();
     addRandomValues(emptyCells,2);
 });
+
