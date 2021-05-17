@@ -54,17 +54,11 @@ Heading
     padding:25px;
     font-size:25px;
    }
-/* styling created according to flexbox
-.r1{    
-   display:flex;
-    flex-wrap: no-wrap;
-   
+/*media breakpoint
+*/
+@media screen and (min-width: 700px) {
+    body{
+        margin-left:10%;
+        margin-right: 10%;
+    }   
 }
-.cell{
-    min-width: 200px;
-    width:15%;
-    height:100px;
-    padding:10px;
-    border: solid 1px orange;
-}
- */
