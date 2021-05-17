@@ -123,6 +123,7 @@ function mergeUp(){
         combinedCol[i]=combineLeft(slidCol[i]);
         arrComplete1[i]=slideLeft(combinedCol[i]);
     }
+    // flatten the 2-d array so that i
     for(let i=0;i<arrComplete1.length;i++){
         for(let j=0;j<arrComplete1[i].length;j++){
             arrComplete.push(arrComplete1[j][i]);
@@ -139,4 +140,19 @@ function mergeDown(){
     let slidCol=[];
     let combinedCol=[];
     let arrComplete1=[];let arrComplete=[];
+    console.log(splitColArray);
+    for(let i=0;i<splitColArray.length;i++){
+        slidCol[i]=slideRight(splitColArray[i]);
+        combinedCol[i]=combineRight(slidCol[i]);
+        arrComplete1[i]=slideRight(combinedCol[i]);
+    }
+    for(let i=0;i<arrComplete1.length;i++){
+        for(let j=0;j<arrComplete1[i].length;j++){
+            arrComplete.push(arrComplete1[j][i]);
+        }
+    }
+
+    console.log(arrComplete1);
+    console.log(arrComplete);   
+    display(arrComplete);
 }

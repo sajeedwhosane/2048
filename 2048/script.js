@@ -18,7 +18,7 @@ switch(key){
     break;
 
   case 'ArrowDown': case 'KeyS':
-    //MergenMove down
+    mergeDown();
     addRandomValues(a,1);
     break;
   
