@@ -8,16 +8,19 @@
 function display(arr,direction){
     //get all the cells
        let positions= document.querySelectorAll(".cell");
-    if(direction == "row"){
+
         var newArr= [];
-        
+        if(direction == "row"){
         for(let i=0;i<arr.length;i++){
             for(let j=0;j<arr[i].length;j++){
                 newArr.push(arr[i][j]);
             }
         }
         
-        for(let i=0;i<newArr.length;i++){
+    }else{
+           newArr=arr;
+        }
+    for(let i=0;i<newArr.length;i++){
                 if(newArr[i]==0){
                     positions[i].innerHTML="";
                 }else{
@@ -26,7 +29,6 @@ function display(arr,direction){
                 }
                 
         }
-    }
 
 }
 
@@ -111,3 +113,30 @@ function mergeRight(){
 /*
 =UP
 */
+function mergeUp(){
+    let splitColArray=splitIntoCols();
+    let slidCol=[];
+    let combinedCol=[];
+    let arrComplete1=[];let arrComplete=[];
+    for(let i=0;i<splitColArray.length;i++){
+        slidCol[i]=slideLeft(splitColArray[i]);
+        combinedCol[i]=combineLeft(slidCol[i]);
+        arrComplete1[i]=slideLeft(combinedCol[i]);
+    }
+    for(let i=0;i<arrComplete1.length;i++){
+        for(let j=0;j<arrComplete1[i].length;j++){
+            arrComplete.push(arrComplete1[j][i]);
+        }
+    }
+    console.log(arrComplete1);
+    console.log(arrComplete);
+    display(arrComplete);
+}
+
+
+function mergeDown(){
+    let splitColArray=splitIntoCols();
+    let slidCol=[];
+    let combinedCol=[];
+    let arrComplete1=[];let arrComplete=[];
+}

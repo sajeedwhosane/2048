@@ -69,14 +69,14 @@ function splitIntoCols(){
         [2,6,10,14],
         [3,7,11,15]
     ];
-    console.log(arr);
     
-    let splitColArray=[];   
+    let splitColArray=[[],[],[],[]];   
+    
     for(let i=0;i<4;i++){
-        for(let j=0;j<index[i].length;j++)
-           // let ind=index[j];
-            splitColArray[i].push(arr[index[i][j]]);
-        //splitColArray.push(arr[index[j]]);
+        for(let j=0;j<index[i].length;j++){
+            let ind=index[i][j];
+            splitColArray[i].push(arr[ind]);
+        }
     }
 return splitColArray;
 }

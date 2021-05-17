@@ -13,6 +13,7 @@ let key=e.code;
 switch(key){
   case 'ArrowUp': case 'KeyW':
     //MergenMove up
+    mergeUp();
     addRandomValues(a,1);
     break;
 
