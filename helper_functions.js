@@ -57,7 +57,7 @@ function splitIntoRows(){
     for(let i=0;i<4;i++){
         splitRowArray[i]=arr.splice(0,4);
     }
-    console.log(splitRowArray[3]);
+    return splitRowArray;
     
 }
 splitIntoRows();
@@ -78,4 +78,8 @@ function getEmptyCells(){
         }
     }
     return(emptyCells);
+}
+
+function isNotEmpty(value){
+    return value !==0;
 }

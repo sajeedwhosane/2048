@@ -23,6 +23,7 @@ switch(key){
   
   case 'ArrowLeft': case "KeyA":
   //MergenMove left
+    mergeLeft();
   addRandomValues(a,1);
   break;
 
