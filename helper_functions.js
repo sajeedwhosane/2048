@@ -25,7 +25,6 @@ function addRandomValues(arr,n){
    let min=0;
       for(let i=0;i<n;i++){
     let rV=  Math.floor(Math.random() * (max));
-    console.log(arr[rV]);
     document.getElementById(arr[rV]).innerText=2;
    }
      
@@ -67,13 +66,9 @@ function to check for empty values in the grid.
 
 function getEmptyCells(){
     let x=document.querySelectorAll(".cell");
-    console.log(x.length);
-    console.log(x[0]);
-    console.log(x[0].innerText);
     let emptyCells=[];
     for(let i=0;i<x.length;i++){
         if(x[i].innerText ==""){
-            console.log(x[i].id);
             emptyCells.push(x[i].id);
         }
     }
@@ -82,4 +77,8 @@ function getEmptyCells(){
 
 function isNotEmpty(value){
     return value !==0;
+}
+
+function isEmpty(value){
+    return value ==0;
 }
