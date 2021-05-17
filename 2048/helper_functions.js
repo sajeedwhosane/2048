@@ -60,6 +60,28 @@ function splitIntoRows(){
     
 }
 splitIntoRows();
+
+function splitIntoCols(){
+    let arr= getCellValues();
+    let index=[
+        [0,4,8,12],
+        [1,5,9,13],
+        [2,6,10,14],
+        [3,7,11,15]
+    ];
+    console.log(arr);
+    
+    let splitColArray=[];   
+    for(let i=0;i<4;i++){
+        for(let j=0;j<index[i].length;j++)
+           // let ind=index[j];
+            splitColArray[i].push(arr[index[i][j]]);
+        //splitColArray.push(arr[index[j]]);
+    }
+return splitColArray;
+}
+
+console.log(splitIntoCols());
 /*
 function to check for empty values in the grid.
 */

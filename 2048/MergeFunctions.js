@@ -106,3 +106,8 @@ function mergeRight(){
  }   
     display(arrComplete,"row");
 }
+
+
+/*
+=UP
+*/
