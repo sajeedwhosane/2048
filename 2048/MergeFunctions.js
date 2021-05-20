@@ -29,7 +29,11 @@ function display(arr,direction){
                 }
                 
         }
-
+let score=scoreCalculate(newArr);
+localStorage.setItem("score",score);
+let scoreVal=localStorage.getItem("score");
+let scoreEle=document.getElementById("score");
+scoreEle.innerHTML=scoreVal;
 }
 
 function slideLeft(arr){

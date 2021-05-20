@@ -1,3 +1,4 @@
+localStorage.setItem("score",0);
 document.addEventListener('keydown', logKey);
 /* 
 function called when the keyboard event is triggered.
